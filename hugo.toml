@@ -1,0 +1,26 @@
+baseURL = "https://michael-murdy.github.io/happy-eating/"
+title = "Food things"
+languageCode = "en-us"
+theme = "ananke"
+[pagination]
+pagerSize = 10
+
+
+[params]
+description = "Mike's repo of recipes"
+# Ananke-specific niceties:
+show_reading_time = true
+recent_posts_number = 6
+
+# Make categories and tags work as taxonomies
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+# Optional: enable section menu so "Recipes" shows up in nav
+[menu]
+[[menu.main]]
+identifier = "recipes"
+name = "Recipes"
+url = "/recipes/"
+weight = 10

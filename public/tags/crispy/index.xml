@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crispy on Food things</title>
+    <link>http://localhost:1313/happy-eating/tags/crispy/</link>
+    <description>Recent content in Crispy on Food things</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/happy-eating/tags/crispy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World Potatoes</title>
+      <link>http://localhost:1313/happy-eating/recipes/hello-world/</link>
+      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/happy-eating/recipes/hello-world/</guid>
+      <description>&lt;h2 id=&#34;ingredients&#34;&gt;Ingredients&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;1 lb baby potatoes&lt;/li&gt;&#xA;&lt;li&gt;2 tbsp butter&lt;/li&gt;&#xA;&lt;li&gt;1 tbsp olive oil&lt;/li&gt;&#xA;&lt;li&gt;Salt &amp;amp; pepper&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Boil potatoes until just tender; drain.&lt;/li&gt;&#xA;&lt;li&gt;Smash gently; pan-fry in butter + oil until crispy.&lt;/li&gt;&#xA;&lt;li&gt;Season and serve.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Tip: Add minced garlic or rosemary in the last minute for extra aroma.&lt;/p&gt;&lt;/blockquote&gt;</description>
+    </item>
+  </channel>
+</rss>
