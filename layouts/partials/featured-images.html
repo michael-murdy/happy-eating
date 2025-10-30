@@ -1,0 +1,23 @@
+{{/* Expects . (the page) */}}
+{{- $p := . -}}
+{{- $name := $p.Params.featured_image -}}
+{{- $angle := int (default 0 $p.Params.featured_image_angle) -}}
+
+{{- if and $name ($p.Resources.GetMatch $name) -}}
+{{- $img := $p.Resources.GetMatch $name -}}
+{{- $processed := cond (ne $angle 0) ( $img | images.Rotate $angle ) $img -}}
+
+{{/* Optional: also make a couple sizes for responsive images */}}
+{{- $large := $processed.Fit "1600x1600" -}}
+{{- $medium := $processed.Fit "1200x1200" -}}
+{{- $small := $processed.Fit "800x800" -}}
+
+<picture>
+    <source media="(min-width: 1200px)" srcset="{{ $large.RelPermalink }}">
+    <source media="(min-width: 800px)"  srcset="{{ $medium.RelPermalink }}">
+    <img src="{{ $small.RelPermalink }}" alt="{{ $p.Title }}">
+</picture>
+
+{{/* Export a scratch var with the absolute URL for OG tags if you want */}}
+{{- $.Scratch.Set "featuredAbsURL" $large.Permalink -}}
+{{- end -}}

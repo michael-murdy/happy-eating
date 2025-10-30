@@ -3,30 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/happy-eating/categories/</loc>
-    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/happy-eating/tags/crispy/</loc>
-    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/happy-eating/tags/citrus/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/happy-eating/tags/easy/</loc>
-    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/happy-eating/tags/fish/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/happy-eating/recipes/hello-world/</loc>
-    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/happy-eating/tags/grill/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/happy-eating/tags/potatoes/</loc>
-    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/happy-eating/recipes/</loc>
-    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/happy-eating/categories/sides/</loc>
-    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/happy-eating/tags/</loc>
-    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/happy-eating/recipes/hogfish_grilled_on_citrus/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/happy-eating/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/happy-eating/categories/proteins/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/happy-eating/recipes/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/happy-eating/tags/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/happy-eating/tags/pork/</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/happy-eating/recipes/tenderloin_with_mushroom_wine/</loc>
     <lastmod>2025-09-04T00:00:00+00:00</lastmod>
   </url>
 </urlset>

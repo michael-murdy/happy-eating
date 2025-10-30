@@ -1,0 +1,16 @@
+{{- $src := .Get "src" -}}
+{{- $angle := int (default "0" (.Get "angle")) -}}
+{{- $alt := default "" (.Get "alt") -}}
+{{- $class := default "" (.Get "class") -}}
+
+{{- $img := .Page.Resources.GetMatch $src -}}
+{{- if not $img -}}
+{{- errorf "rotated shortcode: image %q not found as a Page Resource on %s" $src .Page.File.Path -}}
+{{- end -}}
+
+{{- $processed := $img -}}
+{{- if ne $angle 0 -}}
+{{- $processed = $processed | images.Rotate $angle -}}
+{{- end -}}
+
+<img src="{{ $processed.RelPermalink }}" alt="{{ $alt }}"{{ if $class }} class="{{ $class }}"{{ end }}>

@@ -6,27 +6,34 @@
     <description>Recent content in Tags on Food things</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/happy-eating/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Crispy</title>
-      <link>http://localhost:1313/happy-eating/tags/crispy/</link>
-      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/happy-eating/tags/crispy/</guid>
+      <title>Citrus</title>
+      <link>http://localhost:1313/happy-eating/tags/citrus/</link>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/happy-eating/tags/citrus/</guid>
       <description></description>
     </item>
     <item>
-      <title>Easy</title>
-      <link>http://localhost:1313/happy-eating/tags/easy/</link>
-      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/happy-eating/tags/easy/</guid>
+      <title>Fish</title>
+      <link>http://localhost:1313/happy-eating/tags/fish/</link>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/happy-eating/tags/fish/</guid>
       <description></description>
     </item>
     <item>
-      <title>Potatoes</title>
-      <link>http://localhost:1313/happy-eating/tags/potatoes/</link>
+      <title>Grill</title>
+      <link>http://localhost:1313/happy-eating/tags/grill/</link>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/happy-eating/tags/grill/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pork</title>
+      <link>http://localhost:1313/happy-eating/tags/pork/</link>
       <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/happy-eating/tags/potatoes/</guid>
+      <guid>http://localhost:1313/happy-eating/tags/pork/</guid>
       <description></description>
     </item>
   </channel>
