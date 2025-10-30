@@ -3,4 +3,8 @@ title: "Mike's Eats"
 ---
 # Welcome to Mike's Kitchen
 
-Browse the **Recipes** section for categories and tags. Everything here is simple Markdown.
+### Mike's recipe repository 
+
+_...and playground for GitHub Pages hosting a Hugo static site_  
+
+
