@@ -1,16 +1,61 @@
 # Repository Guidelines
 
-## Project Structure & Module Organization
-Place all recipe and blog content under `content/`, using directories to mirror site sections (for example, `content/recipes/desserts/`). Keep custom templates in `layouts/`; use `layouts/_default` for base list and single views and `layouts/partials/` for reusable snippets. Static assets, such as photos and downloadable PDFs, belong in `static/` so they publish verbatim. Generated artifacts live in `public/` (production build output) and `resources/` (Hugo cache). Avoid editing the upstream theme in `themes/ananke/`; add overrides in the root `layouts/` or `assets/` folders instead.
+This is a personal recipe blog hosted on GitHub Pages — a fun spare-time project for cataloging and sharing favorite recipes.
 
-## Build, Test, and Development Commands
-Run `hugo server -D` to start a live-reloading preview that includes draft content. Use `hugo` for a production build; confirm the command finishes with “Total in … ms” and that the `public/` directory updates. When deploying, publish only the `public/` artifacts or let the CI pipeline run `hugo` for you.
+## Agent Roles
 
-## Coding Style & Naming Conventions
-Front matter uses YAML; keep keys lowercase (`title`, `description`, `draft`) and prefer hyphenated slugs (e.g., `black-bean-tacos`). Markdown should follow 120-character soft wraps and sentence-case headings. Go template files in `layouts/` follow two-space indentation and pipe-heavy expressions should break onto new lines for readability. When adding SCSS or JS assets, mirror the naming already present in `assets/` and run them through Hugo’s pipeline instead of linking raw files.
+**OpenAI Codex** — Implementer and content writer. You handle:
+- Writing recipe markdown files from content provided by the user
+- Implementing features and templates based on plans/specs from Claude
+- Making code changes according to architectural decisions already made
 
-## Testing Guidelines
-There is no automated test suite; rely on Hugo’s built-in validation. Before opening a PR, run `hugo` and check for warnings about missing resources or taxonomy terms. Review the rendered pages locally to confirm links, images, and structured data render correctly. For new content types, add a sample page under `content/` and verify the matching template resolves as expected.
+**Claude** — Architect and planner (see CLAUDE.md). Handles planning, documentation, and architectural decisions.
 
-## Commit & Pull Request Guidelines
-Commit messages follow an imperative, present-tense summary (`Add seasonal menu landing`). Group related edits and avoid mixing content and template refactors in the same commit. Pull requests should include: a concise summary, screenshots or GIFs of visual changes, links to any relevant issues, and a note on testing steps (e.g., “Ran `hugo` locally”). Tag reviewers familiar with the affected section (content vs. theme) to speed turnaround.
+When implementing, follow the specs and plans provided. If something is unclear or you think the plan needs adjustment, flag it rather than improvising.
+
+## Project Structure
+
+Place all recipe content under `content/recipes/` as page bundles (directory with `index.md` plus images). Keep custom templates in `layouts/`; use `layouts/_default` for base views and `layouts/partials/` for reusable snippets. Static assets belong in `static/`. Avoid editing `themes/ananke/`; add overrides in root `layouts/` or `assets/` instead.
+
+## Build Commands
+
+- `hugo server -D` — Live-reloading preview with drafts
+- `hugo` — Production build to `public/`
+
+## Writing Recipes
+
+Use the archetype: `hugo new recipes/my-recipe-name/index.md`
+
+Front matter template:
+```yaml
+title: "Recipe Name"
+date: 2025-01-18
+categories: ["Category"]
+tags: ["tag1", "tag2"]
+featured_image: "photo.jpeg"
+featured_image_angle: 0
+prep_time: "X minutes"
+cook_time: "X minutes"
+servings: X
+```
+
+Recipe structure:
+- `## Ingredients` — Bulleted list
+- `## Preparation` or `## Instructions` — Numbered steps
+- `## Serving` — Optional serving suggestions
+- Use `> **Tip:**` blockquotes for helpful notes
+
+Place recipe photos in the same directory as `index.md` (page bundle pattern).
+
+## Style Conventions
+
+- YAML front matter with lowercase keys
+- Hyphenated slugs (e.g., `black-bean-tacos`)
+- Sentence-case headings
+- 120-character soft wrap for markdown
+- Two-space indentation in templates
+- Commit messages: imperative present tense ("Add grilled salmon recipe")
+
+## Before Committing
+
+Run `hugo` and check for warnings. Review rendered pages locally to confirm images and links work.
