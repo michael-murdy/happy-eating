@@ -3,7 +3,7 @@ title: "Roasted Pork Tenderloin with Red Wine, Mushroom Ragout"
 date: 2025-09-04
 categories: ["Proteins"]
 tags: ["pork"]
-featured_image: "/images/pork_1.jpeg"
+featured_image: "pork_1.jpeg"
 prep_time: "10 minutes"
 no_prep_rest_time: "2-3 hours"
 cook_time: "30 minutes"

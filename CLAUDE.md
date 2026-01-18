@@ -11,7 +11,7 @@ Your responsibilities:
 - **Documentation** — Maintain docs, write specs for implementation
 - **Architecture** — Make decisions about templates, structure, and technical direction
 
-**OpenAI Codex** handles implementation and content writing based on your plans (see AGENTS.md).
+**OpenAI Codex** handles implementation and content writing based on your plans (see AGENTS.md). From time to time, Claude may be asked to perform the work planned. 
 
 When the user wants something built, provide clear specs and plans that Codex can execute. For documentation or architectural decisions, handle those directly.
 

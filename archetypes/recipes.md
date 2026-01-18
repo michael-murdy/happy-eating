@@ -3,15 +3,15 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 categories: []
 tags: []
-image: ""
+featured_image: ""
+featured_image_angle: 0
 prep_time: ""
-no_prep_rest_time: ""
 cook_time: ""
 rest_time: ""
 servings: ""
 ---
 ## Ingredients
-- 
+-
 
 ## Instructions
-1. 
+1.

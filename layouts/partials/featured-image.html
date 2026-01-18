@@ -1,0 +1,25 @@
+{{/* Render the page's featured image at multiple sizes. */}}
+{{- $p := . -}}
+{{- $url := partials.Include "func/GetFeaturedImage.html" $p -}}
+{{- $angle := int (default 0 ($p.Scratch.Get "featured_image_angle")) -}}
+{{- $style := "" -}}
+{{- if ne $angle 0 -}}
+  {{- $style = printf "transform: rotate(%ddeg); transform-origin: center center;" $angle -}}
+{{- end -}}
+{{- if not $url -}}
+  {{- return -}}
+{{- end -}}
+
+{{- with $p.Scratch.Get "featured_image_resource" -}}
+  {{- $large := .Fit "1600x1600" -}}
+  {{- $medium := .Fit "1200x1200" -}}
+  {{- $small := .Fit "800x800" -}}
+  <picture>
+    <source media="(min-width: 1200px)" srcset="{{ $large.RelPermalink }}">
+    <source media="(min-width: 800px)"  srcset="{{ $medium.RelPermalink }}">
+    <img src="{{ $small.RelPermalink }}" alt="{{ $p.Title }}"{{ if $style }} style="{{ $style | safeCSS }}"{{ end }}>
+  </picture>
+  {{- $.Scratch.Set "featuredAbsURL" $large.Permalink -}}
+{{- else -}}
+  <img src="{{ $url }}" alt="{{ $p.Title }}"{{ if $style }} style="{{ $style | safeCSS }}"{{ end }}>
+{{- end -}}
