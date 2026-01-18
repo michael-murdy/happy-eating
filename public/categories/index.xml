@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Food things</title>
-    <link>http://localhost:1313/happy-eating/categories/</link>
+    <link>https://michael-murdy.github.io/happy-eating/categories/</link>
     <description>Recent content in Categories on Food things</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/happy-eating/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://michael-murdy.github.io/happy-eating/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Proteins</title>
-      <link>http://localhost:1313/happy-eating/categories/proteins/</link>
+      <link>https://michael-murdy.github.io/happy-eating/categories/proteins/</link>
       <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/happy-eating/categories/proteins/</guid>
+      <guid>https://michael-murdy.github.io/happy-eating/categories/proteins/</guid>
       <description></description>
     </item>
   </channel>

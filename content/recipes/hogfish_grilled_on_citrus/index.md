@@ -3,8 +3,8 @@ title: "Grilled Whole Hogfish on Citrus / Herb Bed"
 date: 2025-09-11
 categories: ["Proteins"]
 tags: ["fish", "grill", "citrus"]
-featured_image: "hogfish_on_citrus_on_grill.jpeg"  
-featured_image_angle: 90                            
+featured_image: "hogfish_on_citrus_on_grill.jpeg"
+featured_image_angle: 90
 prep_time: "15 minutes"
 cook_time: "20-30 minutes"
 servings: 4

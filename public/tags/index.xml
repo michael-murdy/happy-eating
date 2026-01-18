@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Food things</title>
-    <link>http://localhost:1313/happy-eating/tags/</link>
+    <link>https://michael-murdy.github.io/happy-eating/tags/</link>
     <description>Recent content in Tags on Food things</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/happy-eating/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://michael-murdy.github.io/happy-eating/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Citrus</title>
-      <link>http://localhost:1313/happy-eating/tags/citrus/</link>
+      <link>https://michael-murdy.github.io/happy-eating/tags/citrus/</link>
       <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/happy-eating/tags/citrus/</guid>
+      <guid>https://michael-murdy.github.io/happy-eating/tags/citrus/</guid>
       <description></description>
     </item>
     <item>
       <title>Fish</title>
-      <link>http://localhost:1313/happy-eating/tags/fish/</link>
+      <link>https://michael-murdy.github.io/happy-eating/tags/fish/</link>
       <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/happy-eating/tags/fish/</guid>
+      <guid>https://michael-murdy.github.io/happy-eating/tags/fish/</guid>
       <description></description>
     </item>
     <item>
       <title>Grill</title>
-      <link>http://localhost:1313/happy-eating/tags/grill/</link>
+      <link>https://michael-murdy.github.io/happy-eating/tags/grill/</link>
       <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/happy-eating/tags/grill/</guid>
+      <guid>https://michael-murdy.github.io/happy-eating/tags/grill/</guid>
       <description></description>
     </item>
     <item>
       <title>Pork</title>
-      <link>http://localhost:1313/happy-eating/tags/pork/</link>
+      <link>https://michael-murdy.github.io/happy-eating/tags/pork/</link>
       <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/happy-eating/tags/pork/</guid>
+      <guid>https://michael-murdy.github.io/happy-eating/tags/pork/</guid>
       <description></description>
     </item>
   </channel>
