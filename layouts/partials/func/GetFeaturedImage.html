@@ -1,44 +1,54 @@
-{{/* Return the featured image URL for a page and capture helpful scratch values. */}}
+{{- /* Return the featured image URL for a page and capture helpful scratch values. */ -}}
+{{- /* If featured_image_angle is set, the image is rotated using Hugo's image processing. */ -}}
 {{- $page := . -}}
 {{- $angle := int (default 0 $page.Params.featured_image_angle) -}}
 {{- $page.Scratch.Set "featured_image_angle" $angle -}}
 {{- $page.Scratch.Delete "featured_image_resource" -}}
 {{- $page.Scratch.Delete "featuredAbsURL" -}}
-
 {{- $linkToCover := "" -}}
-
+{{- $foundResource := false -}}
+{{- /* Try to find image from featured_image param */ -}}
 {{- with $page.Params.featured_image -}}
   {{- $name := . -}}
   {{- $linkToCover = strings.Trim $name "/" | urls.AbsURL -}}
   {{- $candidates := slice $name (strings.TrimPrefix "/" $name) (strings.TrimPrefix "./" $name) -}}
   {{- range $candidate := $candidates -}}
-    {{- if not ($page.Scratch.Get "featured_image_resource") -}}
-      {{- with $page.Resources.GetMatch $candidate -}}
-        {{- $page.Scratch.Set "featured_image_resource" . -}}
-        {{- $page.Scratch.Set "featuredAbsURL" .Permalink -}}
-        {{- $linkToCover = .RelPermalink -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-{{- else -}}
-  {{- with $page.Resources.ByType "image" -}}
-    {{- $matches := "feature,cover" -}}
-    {{- with .GetMatch (fmt.Printf "**{%s}*" $matches) -}}
-      {{- $page.Scratch.Set "featured_image_resource" . -}}
-      {{- $page.Scratch.Set "featuredAbsURL" .Permalink -}}
-      {{- $linkToCover = .RelPermalink -}}
-    {{- else -}}
-      {{- with .GetMatch "*" -}}
-        {{- $page.Scratch.Set "featured_image_resource" . -}}
-        {{- $page.Scratch.Set "featuredAbsURL" .Permalink -}}
-        {{- $linkToCover = .RelPermalink -}}
+    {{- if not $foundResource -}}
+      {{- $resource := $page.Resources.GetMatch $candidate -}}
+      {{- if $resource -}}
+        {{- $foundResource = true -}}
+        {{- $img := $resource -}}
+        {{- if ne $angle 0 -}}
+          {{- $img = $resource.Process (printf "r%d" $angle) -}}
+        {{- end -}}
+        {{- $page.Scratch.Set "featured_image_resource" $img -}}
+        {{- $page.Scratch.Set "featuredAbsURL" $img.Permalink -}}
+        {{- $linkToCover = $img.RelPermalink -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
-
+{{- /* Fallback: look for feature/cover image or any image */ -}}
+{{- if not $foundResource -}}
+  {{- $images := $page.Resources.ByType "image" -}}
+  {{- if $images -}}
+    {{- $matches := "feature,cover" -}}
+    {{- $resource := $images.GetMatch (fmt.Printf "**{%s}*" $matches) -}}
+    {{- if not $resource -}}
+      {{- $resource = $images.GetMatch "*" -}}
+    {{- end -}}
+    {{- if $resource -}}
+      {{- $img := $resource -}}
+      {{- if ne $angle 0 -}}
+        {{- $img = $resource.Process (printf "r%d" $angle) -}}
+      {{- end -}}
+      {{- $page.Scratch.Set "featured_image_resource" $img -}}
+      {{- $page.Scratch.Set "featuredAbsURL" $img.Permalink -}}
+      {{- $linkToCover = $img.RelPermalink -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- if and (not ($page.Scratch.Get "featuredAbsURL")) $linkToCover -}}
   {{- $page.Scratch.Set "featuredAbsURL" $linkToCover -}}
 {{- end -}}
-
 {{- $linkToCover -}}

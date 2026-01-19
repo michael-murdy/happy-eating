@@ -1,44 +1,24 @@
-{{ $featured_image := partials.Include "func/GetFeaturedImage.html" . }}
-{{ $angle := int (default 0 (.Scratch.Get "featured_image_angle")) }}
-{{ if $featured_image }}
+{{/* Site header with optional featured image background. */}}
+{{/* Image rotation is handled in GetFeaturedImage.html via Hugo's images.Rotate filter. */}}
+{{- $featured_image := partials.Include "func/GetFeaturedImage.html" . -}}
+{{- if $featured_image -}}
   {{ $featured_image_class := site.Params.featured_image_class | compare.Default "cover bg-top" }}
   {{ $cover_dimming_class := site.Params.cover_dimming_class | compare.Default "bg-black-60" }}
-  {{ if eq $angle 0 }}
-    <header class="{{ $featured_image_class }}" style="background-image: url('{{ $featured_image }}');">
-      <div class="{{ $cover_dimming_class }}">
-        {{ partials.Include "site-navigation.html" .}}
-        <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-          <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-            {{ .Title | compare.Default .Site.Title }}
-          </h1>
-          {{ with .Params.description }}
-            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-              {{ . }}
-            </h2>
-          {{ end }}
-        </div>
+  <header class="{{ $featured_image_class }}" style="background-image: url('{{ $featured_image }}');">
+    <div class="{{ $cover_dimming_class }}">
+      {{ partials.Include "site-navigation.html" .}}
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          {{ .Title | compare.Default .Site.Title }}
+        </h1>
+        {{ with .Params.description }}
+          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
+            {{ . }}
+          </h2>
+        {{ end }}
       </div>
-    </header>
-  {{ else }}
-    <header class="{{ $featured_image_class }} relative overflow-hidden">
-      <div class="absolute top-0 left-0 w-100 h-100" style="z-index:-1;">
-        <img src="{{ $featured_image }}" alt="image from {{ .Title }}" style="width:100%;height:100%;object-fit:cover;transform: rotate({{ $angle }}deg); transform-origin: center center;">
-      </div>
-      <div class="{{ $cover_dimming_class }} relative">
-        {{ partials.Include "site-navigation.html" .}}
-        <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-          <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-            {{ .Title | compare.Default .Site.Title }}
-          </h1>
-          {{ with .Params.description }}
-            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-              {{ . }}
-            </h2>
-          {{ end }}
-        </div>
-      </div>
-    </header>
-  {{ end }}
+    </div>
+  </header>
 {{ else }}
   <header>
     <div class="pb3-m pb6-l {{ .Site.Params.background_color_class | compare.Default "bg-black" }}">
